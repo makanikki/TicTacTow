@@ -5,6 +5,7 @@ describe("winnerPicker", () => {
   describe("buildMatrice", () => {
     it("should build the proper matrice", () => {
       const board = {
+        0: "O",
         1: "X",
         2: "X",
         3: "X",
@@ -12,26 +13,25 @@ describe("winnerPicker", () => {
         5: "X",
         6: "O",
         7: "O",
-        8: "X",
-        9: "O"
+        8: "X"
       };
 
-      const expected = [["X", "X", "X"], ["O", "X", "O"], ["O", "X", "O"]];
+      const expected = [["O", "X", "X"], ["X", "O", "X"], ["O", "O", "X"]];
 
       expect(buildMatrice(board)).toEqual(expected);
     });
 
     it("should build the proper matrice even if incomplete", () => {
       const board = {
+        0: "X",
         1: "X",
         2: "X",
-        3: "X",
-        4: undefined,
-        5: "X",
-        6: undefined,
-        7: "O",
-        8: "X",
-        9: "O"
+        3: undefined,
+        4: "X",
+        5: undefined,
+        6: "O",
+        7: "X",
+        8: "O"
       };
 
       const expected = [
