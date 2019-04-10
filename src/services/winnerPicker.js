@@ -46,6 +46,7 @@ export function exploreVector(matrice, currentCoords, direction, chain = []) {
 
 export function searchForWin(matrice) {
   // console.warn("matrice", matrice);
+
   let lines = [];
   for (const rowId in matrice) {
     const row = matrice[rowId];

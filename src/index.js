@@ -119,6 +119,7 @@ function Game() {
       <div className="game-info">
         <div>
           Status: <i>{getGameStatus(isGameFinished, winner)}</i>
+
         </div>
         <div>
           Winner: <i>{winner}</i>
